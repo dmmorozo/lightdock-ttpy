@@ -64,19 +64,17 @@ class GSO(object):
         self.n_calc = 0
 
     def target_func(self, x):
-        """if x.ndim > 1:
+        if x.ndim > 1:
             scoring = np.zeros(len(x))
             for i in range(len(x)):
                 self.swarm.glowworms[0].landscape_positions[0].update_landscape_position(x[i])
                 scoring[i] = -1.0 * self.swarm.glowworms[0].landscape_positions[0].evaluate_objective_function()
                 self.n_calc = self.n_calc + 1
-        else:"""
-        self.swarm.glowworms[0].landscape_positions[0].update_landscape_position(x)
-        scoring = -1.0 * self.swarm.glowworms[0].landscape_positions[0].evaluate_objective_function()
-        self.n_calc = self.n_calc + 1
+        else:
+            self.swarm.glowworms[0].landscape_positions[0].update_landscape_position(x)
+            scoring = -1.0 * self.swarm.glowworms[0].landscape_positions[0].evaluate_objective_function()
+            self.n_calc = self.n_calc + 1
             
-        """print(f'Step [{self.n_calc}] Energy = {scoring}')"""
-        #print(scoring)
         return scoring
 
     def local_opt(self, x):

@@ -22,6 +22,14 @@ class GSOParameters(object):
             raise GSOParameteresError(str(e))
 
         try:
+            self.rho = 0.0
+            self.gamma = 0.0
+            self.beta = 0.0
+            self.initial_luciferin = 0.0
+            self.initial_vision_range = 0.0
+            self.max_vision_range = 0.0
+            self.max_neighbors = 0
+
             self.rmax = int(self._config.get("TTPY", "rmax"))
             self.ngrid = int(self._config.get("TTPY", "ngrid"))
 

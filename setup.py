@@ -200,6 +200,7 @@ setuptools.setup(
         "bin/lgd_filter_restraints.py",
         "bin/lgd_flatten.py",
         "bin/lgd_generate_conformations.py",
+        "bin/lgd_generate_conformations_onepdb.py",
         "bin/lgd_generate_glowworm_positions.py",
         "bin/lgd_generate_trajectory.py",
         "bin/lgd_gso_to_csv.py",
